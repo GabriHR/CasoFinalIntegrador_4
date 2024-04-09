@@ -3,3 +3,6 @@
 Link con acceso al repositorio:
 
 https://github.com/GabriHR/CasoFinalIntegrador_4.git
+
+
+## RUBRICA DEL TRABAJO
