@@ -195,12 +195,12 @@
 
         private void showMainMenu() {
             Object[] options = {"Guardar texto", "Contar contenido", "Comparar contenido", "Agenda de Contactos",
-                    "Buscador de Palabras", "Multiplicidad de Ventanas", "Herramienta de Dibujo", "Salir"};
+                    "Buscador de Palabras", "Multiplicidad de Ventanas", "Herramienta de Dibujo", "Navegación y Listado", "Salir"};
             int selection = JOptionPane.showOptionDialog(this, "¿Qué desea hacer?", "Menú principal",
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
             if (selection == 0) {
-                // Solicitar los datos del usuario aquí
-                solicitarDatosUsuario();
+                // No solicitar los datos del usuario aquí
+                // solicitarDatosUsuario();
                 saveTextToFile();
             } else if (selection == 1) {
                 countContent();
@@ -215,10 +215,13 @@
             } else if (selection == 6) {
                 showDrawingTool();
             } else if (selection == 7) {
+                // Crear y mostrar la ventana de Navegación y Listado
+                NavegacionListado navegacionListado = new NavegacionListado();
+                navegacionListado.setVisible(true);
+            } else if (selection == 8) {
                 System.exit(0);
             }
         }
-
         private void showMultiplicityOptions() {
             new MultiplicidadVentanas().setVisible(true);
         }
